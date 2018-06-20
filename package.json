@@ -1,0 +1,25 @@
+{
+  "name": "blurts-webdriverio",
+  "version": "1.0.0",
+  "author": "Moe Zilla",
+  "dependencies": {
+    "webdriverio": "4.13.0"
+  },
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "scripts": {
+    "README": "npm run image-size > README.md",
+    "image-size": "node test/image-size",
+    "pretest": "rm test/shots/*.png",
+    "test": "wdio wdio.conf.js"
+  },
+  "devDependencies": {
+    "glob": "7.1.2",
+    "image-size": "0.6.3",
+    "wdio-dot-reporter": "0.0.9",
+    "wdio-mocha-framework": "0.5.13",
+    "wdio-screenshot": "0.6.0",
+    "wdio-selenium-standalone-service": "0.0.10"
+  }
+}
