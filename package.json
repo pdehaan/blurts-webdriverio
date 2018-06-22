@@ -11,11 +11,13 @@
   "scripts": {
     "README": "npm run image-size > README.md",
     "image-size": "node test/image-size",
-    "test": "wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js",
+    "posttest": "imagemin test/shots/* --out-dir=test/shots"
   },
   "devDependencies": {
     "glob": "7.1.2",
     "image-size": "0.6.3",
+    "imagemin-cli": "3.0.0",
     "wdio-dot-reporter": "0.0.9",
     "wdio-mocha-framework": "0.5.13",
     "wdio-screenshot": "0.6.0",
