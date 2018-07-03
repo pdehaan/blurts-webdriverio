@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "author": "Moe Zilla",
   "dependencies": {
+    "blurts-addon": "github:mozilla/blurts-addon",
+    "blurts-utils": "github:pdehaan/blurts-utils",
     "webdriverio": "4.13.0"
   },
   "keywords": [],
@@ -10,9 +12,10 @@
   "main": "index.js",
   "scripts": {
     "README": "npm run image-size > README.md",
+    "build": "download-breaches -o breaches.json",
     "image-size": "node test/image-size",
     "test": "wdio wdio.conf.js",
-    "posttest": "imagemin test/shots/* --out-dir=test/shots"
+    "posttest": "imagemin test/shots/* --out-dir=test/shots && npm run README"
   },
   "devDependencies": {
     "glob": "7.1.2",
